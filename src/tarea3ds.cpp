@@ -11,6 +11,7 @@
 #include<time.h>
 #include "TraditionalHeap.h"
 #include "QuickSort.h"
+#include "Heap.h"
 
 using namespace std;
 
@@ -34,5 +35,13 @@ int main() {
 	{
 		cout << ar[i] << "\t";
 	}
+
+
+	cout << endl;
+	int ar2[] = {2,3,5,18,7,91,112,1,23,40,3,6};
+	cout << "heap" << endl << endl;
+	Heap h = Heap();
+	h.sort(ar2,12);
+
 	return 0;
 }
