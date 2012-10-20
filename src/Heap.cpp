@@ -133,20 +133,22 @@ void Heap::remove(int* data, int length){
 
 }
 
-void Heap::sort(int* data, int length){
+int Heap::sort(int* data, int length){
 
 
+	int t = clock();
 	//deja el arreglo como heap, probado, funciona
 		buildHeap(data, length);
 
 
+		/*
 		cout << "Heap" << endl << endl;
 		for(int i = 0; i < length; i++)
 		{
 				cout << data[i] << "\t";
 		}
 		cout << endl << endl;
-
+	*/
 
 
 	for(int i = length; i>1; i--)
@@ -155,11 +157,13 @@ void Heap::sort(int* data, int length){
 	}
 
 
+	/*
 	cout << "Arreglo ordenado" << endl << endl;
 		//arreglo está ordenado de menor a mayor
 		for(int i = 0; i < length; i++)
 		{
 			cout << data[i] << "\t";
 		}
-
+	*/
+	return t;
 }

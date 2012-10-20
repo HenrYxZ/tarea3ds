@@ -70,18 +70,21 @@ void TraditionalHeap::buildHeap(int* data, int length) {
 
 }
 
-void TraditionalHeap::sort(int* data, int length) {
+int TraditionalHeap::sort(int* data, int length) {
 
+	int t = clock();
 	//deja el arreglo como heap, probado, funciona
 	buildHeap(data, length);
 
 
-	cout << "Heap" << endl << endl;
+	/*
+	cout << "Heap 2.0" << endl << endl;
 	for(int i = 0; i < length; i++)
 	{
 			cout << data[i] << "\t";
 	}
 	cout << endl << endl;
+	*/
 
 	int temp;
 	for(int i = length; i >1 ; i--)
@@ -94,11 +97,15 @@ void TraditionalHeap::sort(int* data, int length) {
 		heapify(data, 1, i-1);
 	}
 
+	/*
 	cout << "Arreglo ordenado" << endl << endl;
 	//arreglo está ordenado de menor a mayor
 	for(int i = 0; i < length; i++)
 	{
 		cout << data[i] << "\t";
 	}
+	*/
+
+	return t;
 
 }

@@ -9,6 +9,7 @@
 #define HEAP_H_
 
 #include <iostream>
+#include<time.h>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ class Heap {
 public:
 	Heap();
 	virtual ~Heap();
-	void sort(int* data, int length);
+	int sort(int* data, int length);
 	void buildHeap(int* data, int length);
 	int heapify(int* data, int i, int length);
 	int left(int i);

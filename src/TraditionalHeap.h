@@ -17,7 +17,7 @@ class TraditionalHeap {
 public:
 	TraditionalHeap();
 	virtual ~TraditionalHeap();
-	void sort(int* data, int length);
+	int sort(int* data, int length);
 	void buildHeap(int* data, int length);
 	void heapify(int* data, int i, int length);
 	int left(int i);
