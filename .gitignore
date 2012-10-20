@@ -14,3 +14,6 @@
 *.cproject
 *.prefs
 .cproject
+
+#algo que quizas genere error
+.settings
