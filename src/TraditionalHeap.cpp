@@ -72,7 +72,7 @@ void TraditionalHeap::buildHeap(int* data, int length) {
 
 int TraditionalHeap::sort(int* data, int length) {
 
-	int t = clock();
+	int t0 = clock();
 	//deja el arreglo como heap, probado, funciona
 	buildHeap(data, length);
 
@@ -105,7 +105,7 @@ int TraditionalHeap::sort(int* data, int length) {
 		cout << data[i] << "\t";
 	}
 	*/
-
-	return t;
+	int t1 = clock();
+	return t1-t0;
 
 }

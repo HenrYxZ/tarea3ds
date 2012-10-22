@@ -28,9 +28,12 @@ void QuickSort::tradQSRec(int*	arr,	int from,	int to){
 	tradQSRec(arr,index_pivote+1,to);
 }
 
-void QuickSort::tradQS(int* arr,int length)
+int QuickSort::tradQS(int* arr,int length)
 {
+	int t0=clock();
 	tradQSRec(arr,0,length-1);
+	int t1=clock();
+	return t1-t0;
 }
 
 int QuickSort::pivotFirst(int*	arr,int from,int	to)
@@ -65,8 +68,12 @@ void QuickSort::randQSRec(int*	arr,	int from,	int to){
 	tradQSRec(arr,from,index_pivote	-1);
 	tradQSRec(arr,index_pivote+1,to);
 }
-void QuickSort::randQS(int* arr,int length){
+int QuickSort::randQS(int* arr,int length){
+
+	int t0=clock();
 	randQSRec(arr,0,length-1);
+	int t1=clock();
+	return t1-t0;
 
 }
 int QuickSort::pivotRandom(int*	arr,int from,int	to)
@@ -119,9 +126,11 @@ int QuickSort::chooseRandom(int from,	int to)
 	random = from + rand() % (to +1 - from);
 	return random;
 }
-void QuickSort::medQS(int* arr,int length){
+int QuickSort::medQS(int* arr,int length){
+	int t0=clock();
 	medQSRec(arr,0,length-1);
-
+	int t1=clock();
+	return t1-t0;
 }
 void QuickSort::medQSRec(int*	arr,	int from,	int to){
 

@@ -9,6 +9,7 @@
 #define QUICKSORT_H_
 
 #include <stdlib.h>
+#include<time.h>
 using namespace std;
 
 class QuickSort {
@@ -24,9 +25,9 @@ private:
 public:
 	QuickSort();
 	virtual ~QuickSort();
-	void tradQS(int* arr,int length);
-	void randQS(int* arr,int length);
-	void medQS(int* arr,int length);
+	int tradQS(int* arr,int length);
+	int randQS(int* arr,int length);
+	int medQS(int* arr,int length);
 
 
 };
